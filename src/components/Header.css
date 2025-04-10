@@ -1,0 +1,115 @@
+.header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #3498db;
+  }
+  
+  .cart-count {
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+    margin-left: 0.3rem;
+  }
+  
+  .logout-btn {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .logout-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .mobile-menu-icon {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .mobile-menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s;
+  }
+  
+  @media (max-width: 768px) {
+    .mobile-menu-icon {
+      display: flex;
+    }
+    
+    .nav-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: #2c3e50;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem;
+      gap: 1rem;
+      transform: translateY(-150%);
+      transition: transform 0.3s ease-in-out;
+      z-index: 99;
+    }
+    
+    .nav-links.open {
+      transform: translateY(0);
+    }
+    
+    .nav-links a, .logout-btn {
+      width: 100%;
+      padding: 0.5rem 0;
+    }
+    
+    .logout-btn {
+      margin-top: 0.5rem;
+      text-align: left;
+    }
+  }
+  
